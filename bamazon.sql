@@ -3,19 +3,19 @@ CREATE DATABASE bamazon_db;
 USE bamazon_db;
 
 CREATE TABLE products (
-  item_id INT NOT NULL AUTO_INCREMENT,
-  product_name VARCHAR(30) NOT NULL,
-  department_name VARCHAR(30) NOT NULL,
-  item_price INTEGER(10) DEFAULT 0,
+  id INT NOT NULL AUTO_INCREMENT,
+  productName VARCHAR(30) NOT NULL,
+  departmentName VARCHAR(30) NOT NULL,
+  itemPrice DECIMAL(10,2) DEFAULT 0,
   StockQuantity INT DEFAULT 0,
   PRIMARY KEY(id)
 );
 
 INSERT INTO product (productName, departmentName, itemPrice,stockQuantity)
-VALUES ('Brooks Launch 2', 'Running Shoes', 99, 12);
+VALUES ('phone', 'place', 99, 12);
 
 INSERT INTO product (productName, departmentName, itemPrice,stockQuantity)
-VALUES ('Brooks Launch 2', 'Running Shoes', 99, 12);
+VALUES ('phone', 'place', 99, 12);
 
 INSERT INTO product (productName, departmentName, itemPrice,stockQuantity)
 VALUES ("phone3", "google", "denver", 600, TRUE);
