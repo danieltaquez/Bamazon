@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS bamazon_db;
-CREATE DATABASE bamazon_db;
-USE bamazon_db;
+DROP DATABASE IF EXISTS bamazon_DB;
+CREATE DATABASE bamazon_DB;
+USE bamazon_DB;
 
 CREATE TABLE products (
   id INT NOT NULL AUTO_INCREMENT,
@@ -11,32 +11,44 @@ CREATE TABLE products (
   PRIMARY KEY(id)
 );
 
-INSERT INTO product (productName, departmentName, itemPrice,stockQuantity)
-VALUES ('phone', 'place', 99, 12);
+INSERT INTO products (productName, departmentName, itemPrice,stockQuantity)
+VALUES ('iPhone Pro', 'Electronics', 1100, 5);
 
-INSERT INTO product (productName, departmentName, itemPrice,stockQuantity)
-VALUES ('phone', 'place', 99, 12);
+INSERT INTO products (productName, departmentName, itemPrice,stockQuantity)
+VALUES ('Samsung Note', 'Electronics', 850, 7);
 
-INSERT INTO product (productName, departmentName, itemPrice,stockQuantity)
-VALUES ("phone3", "google", "denver", 600, TRUE);
+INSERT INTO products (productName, departmentName, itemPrice,stockQuantity)
+VALUES ('Google Pixel', 'Electronics', 400, 5);
 
-INSERT INTO product (productName, departmentName, itemPrice,stockQuantity)
-VALUES ("phone4", "blackberry", "denver", 190, TRUE);
+INSERT INTO products (productName, departmentName, itemPrice,stockQuantity)
+VALUES ('Yeezy Ultra Boost', 'Apparel', 350, 5);
 
-INSERT INTO product (productName, departmentName, itemPrice,stockQuantity)
-VALUES ("phone5", "motorolla", "denver", 250, TRUE);
+INSERT INTO products (productName, departmentName, itemPrice,stockQuantity)
+VALUES ('Versace T-shirt', 'Apparel', 90, 2);
 
-INSERT INTO product (productName, departmentName, itemPrice,stockQuantity)
-VALUES ("phone6", "lg", "denver", 150, TRUE);
+INSERT INTO products (productName, departmentName, itemPrice,stockQuantity)
+VALUES ('Gucci watch', 'Accessories', 600, 1);
 
-INSERT INTO product (productName, departmentName, itemPrice,stockQuantity)
-VALUES ("phone7", "sony", "denver", 300, TRUE);
+INSERT INTO products (productName, departmentName, itemPrice,stockQuantity)
+VALUES ('Calvin Clien Necklace', 'Accessories', 75, 30);
 
-INSERT INTO product (productName, departmentName, itemPrice,stockQuantity)
-VALUES ("phone8", "htc", "denver", 230, TRUE);
+INSERT INTO products (productName, departmentName, itemPrice,stockQuantity)
+VALUES ('Samsung TV 60inch', 'Electronics', 1500, 34);
 
-INSERT INTO product (productName, departmentName, itemPrice,stockQuantity)
-VALUES ("phone9", "oneplus", "denver", 790, TRUE);
+INSERT INTO products (productName, departmentName, itemPrice,stockQuantity)
+VALUES ('Ibuypower pc', 'Electronics', 900, 9);
 
-INSERT INTO product (productName, departmentName, itemPrice,stockQuantity)
-VALUES ("phonex", "nokia", "denver", 50, TRUE);
+INSERT INTO products (productName, departmentName, itemPrice,stockQuantity)
+VALUES ('table top wood', 'Accessories', 90, 12);
+
+CREATE TABLE departments (
+	DepartmentId INT NOT NULL AUTO_INCREMENT,
+	DepartmentName VARCHAR(100) NOT NULL,
+	OverheadCost DECIMAL(10,2) NOT NULL,
+	TotalSales DECIMAL(10,2),
+	PRIMARY KEY(DepartmentId)
+);
+
+INSERT INTO departments(DepartmentName, OverheadCost) VALUES('Apparel', 500);
+INSERT INTO departments(DepartmentName, OverheadCost) VALUES('Electronics', 500);
+INSERT INTO departments(DepartmentName, OverheadCost) VALUES('Accessories', 500);
