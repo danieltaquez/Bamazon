@@ -18,7 +18,7 @@ connection.connect(function(err){
     console.log ('connecyed as id: ' + connection.threadID)
 })
 
-function showProducts(){
+    function showProducts(){
     connection.query('SELECT * FROM products', function (err,res){
         if (err)  throw err;
         console.log('=================================================')
@@ -34,7 +34,7 @@ function showProducts(){
     })
 }
 
-function placeOrder() {
+    function placeOrder() {
         inquirer.prompt([{
             name: 'itemID',
             message: 'Please enter item ID number',
@@ -47,13 +47,13 @@ function placeOrder() {
             }
     },{
             name:'selectQuantity',
-            message: 'How many of this product would you like to order?',
+            message: 'How many would you like to order?',
             validate: function(value){
                 var valid = value.match(/^[0-9]+$/)
                 if(valid){
                     return true
                 }
-                    return 'Please enter a numerical value'
+                    return 'Please enter a value'
         }
     }]).then(function(answer){
         connection.query('SELECT * FROM products WHERE id = ?' , [answer.selectId], function(err,res){
@@ -65,7 +65,7 @@ function placeOrder() {
         }
         else{
             amountOwed = res[0].Price * answer.selectQuantity;
-			currentDepartment = res[0].DepartmentName;
+			currentDepartment = res[0].departmentName;
 			console.log('Thanks for your order');
 			console.log('You owe $' + amountOwed);
             console.log('');
@@ -105,7 +105,6 @@ function logSaleToDepartment(){
 		updateDepartmentTable();
 	})
 };
-
 function updateDepartmentTable(){
     connection.query('UPDATE departments SET ? WHERE ?', [{
     TotalSales: updateSales
@@ -113,5 +112,4 @@ function updateDepartmentTable(){
     DepartmentName: currentDepartment
 }], function(err, res){});
 };
-
 showProducts();

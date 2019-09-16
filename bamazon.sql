@@ -33,7 +33,7 @@ INSERT INTO products (productName, departmentName, itemPrice,stockQuantity)
 VALUES ('Calvin Clien Necklace', 'Accessories', 75, 30);
 
 INSERT INTO products (productName, departmentName, itemPrice,stockQuantity)
-VALUES ('Samsung TV 60inch', 'Electronics', 1500, 34);
+VALUES ('TV stand', 'furniture', 1500, 34);
 
 INSERT INTO products (productName, departmentName, itemPrice,stockQuantity)
 VALUES ('Ibuypower pc', 'Electronics', 900, 9);
@@ -52,3 +52,4 @@ CREATE TABLE departments (
 INSERT INTO departments(DepartmentName, OverheadCost) VALUES('Apparel', 500);
 INSERT INTO departments(DepartmentName, OverheadCost) VALUES('Electronics', 500);
 INSERT INTO departments(DepartmentName, OverheadCost) VALUES('Accessories', 500);
+INSERT INTO departments(DepartmentName, OverheadCost) VALUES('furniture', 500);
