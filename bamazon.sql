@@ -6,7 +6,7 @@ CREATE TABLE products (
   id INT NOT NULL AUTO_INCREMENT,
   productName VARCHAR(30) NOT NULL,
   departmentName VARCHAR(30) NOT NULL,
-  itemPrice DECIMAL(10,2) DEFAULT 0,
+  Price DECIMAL(10,2) DEFAULT 0,
   StockQuantity INT DEFAULT 0,
   PRIMARY KEY(id)
 );
@@ -49,7 +49,7 @@ CREATE TABLE departments (
 	PRIMARY KEY(DepartmentId)
 );
 
-INSERT INTO departments(DepartmentName, OverheadCost) VALUES('Apparel', 500);
-INSERT INTO departments(DepartmentName, OverheadCost) VALUES('Electronics', 500);
-INSERT INTO departments(DepartmentName, OverheadCost) VALUES('Accessories', 500);
-INSERT INTO departments(DepartmentName, OverheadCost) VALUES('furniture', 500);
+INSERT INTO departments(DepartmentName, OverheadCost) VALUES('Apparel', 100);
+INSERT INTO departments(DepartmentName, OverheadCost) VALUES('Electronics', 100);
+INSERT INTO departments(DepartmentName, OverheadCost) VALUES('Accessories', 100);
+INSERT INTO departments(DepartmentName, OverheadCost) VALUES('furniture', 100);

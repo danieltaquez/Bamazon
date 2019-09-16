@@ -1,5 +1,5 @@
 var inquirer = require ('inquirer')
-var mysql = require('sql')
+var mysql = require('mysql')
 
 var amountOwed;
 var currentDepartment;
